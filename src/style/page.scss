@@ -1,0 +1,370 @@
+//----------------------------Variáveis----------------------------//
+$FontLight: "HurmeGeometricLight";
+$FontBold: "HurmeGeometricBold";
+$FontSemiBold: "HurmeGeometricSemiBold";
+$ColorTextGlobal: #373737;
+$BgBody: #dfe4de;
+$BorderBoxFood: #ffff;
+$BGIput: #ffff;
+$BorderInputSubmit: #373737;
+$BgFooter: #f2f4f1;
+$BgEndFooter: #446061;
+$ColorTextEndFooter: #ffffff;
+//-------------------Criando Font Family Das Fonts----------------//
+@font-face {
+  font-family: "HurmeGeometricLight";
+  src: url("/font/HurmeGeometricSans1 Light.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HurmeGeometricBold";
+  src: url("/font/HurmeGeometricSans1 Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HurmeGeometricSemiBold";
+  src: url("/font/HurmeGeometricSans1 SemiBold.otf");
+}
+//-------------------Formatação De Fonts Body----------------------//
+body {
+  font-family: $FontLight;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: $BgBody;
+}
+//-------------------Conteúdo Do início---------------------------//
+a {
+  color: $ColorTextGlobal;
+}
+.containerStart {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../imgs/bg/Grupo de máscara 2@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  @media (min-width: 1200px) {
+    background-size: cover;
+    background-position-y: 90%;
+  }
+  @media (min-width: 665px) and (max-width: 1200px) {
+    background-size: cover;
+    background-position-y: 90%;
+  }
+  @media (max-width: 665px) {
+    background-image: url("../../imgs/bg/Grupo de máscara 2@2x.png");
+    background-position-x: 90%;
+    background-size: cover;
+  }
+  .BoxTextCenter {
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 100%;
+    .TextCenter {
+      text-align: center;
+      font-size: 8vw;
+      @media (min-width: 200px) and (max-width: 800px) {
+        font-size: 14vw;
+      }
+      @media (min-width: 800px) and (max-width: 1200px) {
+        font-size: 10vw;
+      }
+      font-weight: normal;
+      font-style: normal;
+      color: $ColorTextGlobal;
+      font-family: $FontSemiBold;
+    }
+  }
+}
+//------------------Conteúdo do centro------------------------//
+.ConteinerContent {
+  height: 100vh;
+  width: 100%;
+  .BoxTextCenterContent {
+    padding: 4% 0;
+    display: flex;
+    justify-content: center;
+    .TextCenter {
+      text-align: center;
+      font-size: 2.5rem;
+      color: $ColorTextGlobal;
+      display: flex;
+      margin: 1rem 0;
+      flex-direction: column;
+      gap: 1rem;
+      &::after {
+        content: "";
+        width: 50%;
+        margin-left: 20%;
+        height: 2px;
+        background-color: $ColorTextGlobal;
+        display: flex;
+      }
+    }
+  }
+  //---------------------Lista de comidas-----------------//
+  .ContainerLatestRecipes {
+    width: 100%;
+    height: auto;
+    display: block;
+    .ListOfRecipes {
+      max-width: 90%;
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      justify-content: center;
+      justify-content: space-around;
+      @media (min-width: 750px) and (max-width: 930px) {
+        gap: 2rem;
+      }
+      @media (max-width: 750px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 7rem;
+      }
+      .BoxContentRecipes {
+        background-color: #ffff;
+        height: 450px;
+        width: 26%;
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 400px) and (max-width: 850px) {
+          width: 70%;
+        }
+        @media (max-width: 400px) {
+          width: 95%;
+        }
+        .BoxImageFood {
+          width: 100%;
+          .Food {
+            width: 100%;
+            @media (min-width: 400px) and (max-width: 750px) {
+              width: 100%;
+              height: 16rem;
+            }
+            height: 13rem;
+          }
+        }
+        .BoxText {
+          border-right: 2px solid $BorderBoxFood;
+          border-left: 4.5px solid $BorderBoxFood;
+          width: 100%;
+          height: calc(100% - 13rem);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .TextCenterFood {
+            @media (max-width: 750px) {
+              font-size: 7vw;
+            }
+            font-size: 2.7vw;
+            color: $ColorTextGlobal;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 500;
+            &::before {
+              content: "";
+              width: 4rem;
+              height: 2.5px;
+              background-color: $ColorTextGlobal;
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+    .ListContainerAbout {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      margin: 5rem 0;
+      .BoxImgLeft {
+        width: 50%;
+        height: 500px;
+        .ImgLeftAbout {
+          width: 100%;
+          height: 100%;
+        }
+        @media (max-width: 800px) {
+          width: 90%;
+          height: 90%;
+        }
+      }
+      .BoxTextRight {
+        background-color: #ffff;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2rem 8%;
+        gap: 1rem;
+        @media (max-width: 800px) {
+          width: 100%;
+          .TextCenterP {
+            text-align: justify;
+          }
+        }
+        .TextCenter {
+          text-align: center;
+          font-size: 2.5rem;
+          color: $ColorTextGlobal;
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          &::after {
+            content: "";
+            width: 50%;
+            margin-left: 20%;
+            height: 2px;
+            background-color: $ColorTextGlobal;
+            display: flex;
+          }
+        }
+        .TextCenterP {
+          color: $ColorTextGlobal;
+          font-size: 1.1rem;
+          font-family: $FontLight;
+          font-weight: 600;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .ContainerContentSubscribe {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    .BoxContentCenter {
+      height: auto;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 3rem;
+      .TextSubscribe {
+        text-align: center;
+        font-size: 2.5rem;
+        font-family: $FontSemiBold;
+        font-weight: 100;
+        font-style: normal;
+        color: $ColorTextGlobal;
+      }
+      .TextSign {
+        text-align: center;
+        font-family: $FontLight;
+        font-size: 2rem;
+        color: $ColorTextGlobal;
+      }
+      .inputEmail {
+        width: 80%;
+        height: 7rem;
+        border: none;
+        background-color: $BGIput;
+        outline: none;
+        padding-left: 10%;
+        font-size: 2rem;
+        font-family: $FontLight;
+        margin-top: 4rem;
+        @media (max-width: 800px) {
+          width: 90%;
+        }
+      }
+      .inputSubmit {
+        padding: 1rem 4rem;
+        cursor: pointer;
+        background: none;
+        border: $BorderInputSubmit 4px solid;
+        @media (max-width: 800px) {
+          width: 70%;
+        }
+      }
+    }
+  }
+  footer {
+    height: 350px;
+    width: 100%;
+    background-color: $BgFooter;
+    .BoxContentFooter {
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .ContainerList {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5rem;
+        padding: 0 10%;
+        @media (max-width: 650px) {
+          flex-direction: column-reverse;
+          justify-content: center;
+          gap: 3rem;
+          align-items: center;
+        }
+        .ListILinks {
+          display: flex;
+          align-items: center;
+          .icons {
+            display: flex;
+            gap: 0.5rem;
+            .Icon {
+              width: 2.5rem;
+            }
+          }
+        }
+        .NavForSubMenu {
+          display: flex;
+          flex-direction: row;
+          gap: 1.5rem;
+          @media (max-width: 650px) {
+            flex-direction: column;
+            align-items: center;
+          }
+          .ListItemLink {
+            .LinkToRoute {
+              color: $ColorTextGlobal;
+              font-size: 1.4rem;
+              font-weight: 800;
+              font-family: $FontLight;
+            }
+          }
+        }
+      }
+    }
+    .EndFooter {
+      width: 100%;
+      height: 6rem;
+      background-color: $BgEndFooter;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding:  0 2%;
+      .TexToEnd {
+        text-align: justify;
+        @media (max-width:850px) {
+          text-align: center;
+        }
+        color: $ColorTextEndFooter;
+        font-family: $FontLight;
+        font-size: .9rem;
+        font-weight: 100;
+      }
+    }
+  }
+}

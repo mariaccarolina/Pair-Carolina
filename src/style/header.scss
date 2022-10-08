@@ -1,0 +1,27 @@
+.Header {
+  width: 100%;
+  height: 50px;
+  padding: 3%;
+  justify-content: center;
+  .ConteinerItemsCenter {
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 850px) {
+      width: 100%;
+      position: relative;
+    }
+    .BoxLogoFakeLink {
+      .Logo {
+        width: 50px;
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
+    }
+    .Navigation {
+      width: auto;
+    }
+  }
+}
